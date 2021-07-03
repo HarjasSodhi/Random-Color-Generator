@@ -11,7 +11,7 @@ body {
 }
 .container {
   height: 7rem;
-  width: 20rem;
+  width: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,21 +25,25 @@ body {
   opacity: 0.5;
 }
 .color,.gradient{
-  border-radius: 8px;
+  border-radius: 15px;
   height: 100%;
   width: 50%;
-  font-size: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .syntax{
-  font-size: 3rem;
+  position: absolute;
+  top: 23rem;
+  font-size: 2rem;
   color:white;
   opacity: 0.7;
 }
 .copied {
   position: absolute;
   top: 0;
-  left: 39vw;
+  left: 38vw;
   font-size: 3.5rem;
   opacity: 0;
 }

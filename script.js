@@ -20,10 +20,13 @@ function RandomGradientGenerator() {
         }
         NewCode.push(temp);
     }
-    body.style.backgroundImage = 'linear-gradient('
-        + "to left" + ', ' + NewCode[0] + ', ' + NewCode[1] + ", "+NewCode[2]+')';
+    let orientation = ["to right", "to bottom", "45deg", "90deg", "75deg", "135deg", "to left", "180deg"]
+    let RandomDir = orientation[Math.floor(Math.random() * 8)];
+    console.log(RandomDir);
+    body.style.backgroundImage = 'linear-gradient(' + RandomDir + ', ' + NewCode[0] + ', ' + NewCode[1] + ", " + NewCode[2] + ')';
+    let code = ` background-image: linear-gradient(${RandomDir}, ${NewCode[0]} , ${NewCode[1]},${NewCode[2]});`;
     const el = document.createElement('textarea');
-    el.value = NewCode;
+    el.value = code;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
@@ -34,14 +37,15 @@ function RandomGradientGenerator() {
 
 function RandomColorGenerator() {
     copied.classList.remove("copiedAnimation");
-    body.style.backgroundImage ="none"
+    body.style.backgroundImage = "none"
     let NewCode = "#";
     symbolsArr = symbols.split("");
     for (let i = 0; i < 6; i++) {
         NewCode += symbolsArr[Math.floor(Math.random() * 16)];
     }
+    let code = `background-color: ${NewCode}`
     const el = document.createElement('textarea');
-    el.value = NewCode;
+    el.value = code;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
