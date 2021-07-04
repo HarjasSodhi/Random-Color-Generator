@@ -134,7 +134,7 @@ body {
 @media (max-width: 375px) {
   .copied {
     font-size: 1.5rem;
-    left: 6rem;
+    left: 8rem;
   }
   @keyframes copyAnimation {
     50% {
@@ -159,7 +159,7 @@ body {
     font-size: 11px;
   }
   .syntax {
-    top: 20rem;
-    font-size: 10px;
+    top: 23rem;
+    font-size: 13px;
 }
 }
