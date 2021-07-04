@@ -17,34 +17,35 @@ body {
   justify-content: center;
   align-items: center;
 }
-.btn{
+.btn {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   height: 50%;
   opacity: 0.5;
 }
-.color,.gradient{
+.color,
+.gradient {
   border-radius: 15px;
   height: 100%;
   width: 50%;
   background-color: black;
   color: white;
-  font-size: 1.5rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.syntax{
+.syntax {
   position: absolute;
   top: 23rem;
-  font-size: 2rem;
-  color:white;
+  font-size: 2em;
+  color: white;
   opacity: 0.7;
 }
 .copied {
   position: absolute;
   top: 0;
-  left: 38vw;
-  font-size: 3.5rem;
+  left: 39.5vw;
+  font-size: 3.5em;
   opacity: 0;
 }
 .copiedAnimation {
@@ -64,4 +65,101 @@ body {
   100% {
     transform: translateY(-3rem);
   }
+}
+
+@media (max-width: 1024px) {
+  .syntax {
+    top: 47rem;
+  }
+  .copied {
+    left: 23.5rem;
+  }
+  .btn {
+    width: 128%;
+    height: 76%;
+  }
+  .color,
+  .gradient {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 90%;
+    height: 87%;
+  }
+  .copied {
+    left: 15rem;
+  }
+  .syntax {
+    top: 37rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    width: 73%;
+    height: 39%;
+  }
+  .color,
+  .gradient {
+    font-size: 16px;
+  }
+  .copied {
+    font-size: 2rem;
+    left: 7.5rem;
+  }
+  @keyframes copyAnimation {
+    50% {
+      opacity: 0.9;
+      color: white;
+      font-size: 2rem;
+      transform: translateY(3rem);
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-3rem);
+    }
+  }
+  .syntax {
+    top: 26rem;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .copied {
+    font-size: 1.5rem;
+    left: 6rem;
+  }
+  @keyframes copyAnimation {
+    50% {
+      opacity: 0.9;
+      color: white;
+      font-size: 1.5rem;
+      transform: translateY(3rem);
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-3rem);
+    }
+  }
+  .btn {
+    width: 64%;
+    height: 29%;
+  }
+  .color,
+  .gradient {
+    font-size: 11px;
+  }
+  .syntax {
+    top: 20rem;
+    font-size: 10px;
+}
 }

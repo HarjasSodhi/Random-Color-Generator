@@ -32,7 +32,7 @@ function RandomGradientGenerator() {
     document.execCommand('copy');
     document.body.removeChild(el);
     copied.classList.add("copiedAnimation");
-    container.innerText = NewCode;
+    container.innerText = code;
 }
 
 function RandomColorGenerator() {
@@ -52,5 +52,5 @@ function RandomColorGenerator() {
     document.body.removeChild(el);
     copied.classList.add("copiedAnimation");
     body.style.backgroundColor = NewCode;
-    container.innerText = NewCode;
+    container.innerText = code;
 }
