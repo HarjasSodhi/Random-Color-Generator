@@ -1,13 +1,17 @@
-let symbols = "0123456789abcdef"
+const symbols = "0123456789abcdef"
 let colorBtn = document.querySelector(".color");
 let gradientBtn = document.querySelector(".gradient");
 let body = document.querySelector("body");
 let container = document.querySelector(".syntax");
 let copied = document.querySelector(".copied");
+
+
 RandomGradientGenerator();
+
 
 colorBtn.addEventListener("click", RandomColorGenerator)
 gradientBtn.addEventListener("click", RandomGradientGenerator)
+
 
 function RandomGradientGenerator() {
     copied.classList.remove("copiedAnimation");
@@ -34,6 +38,8 @@ function RandomGradientGenerator() {
     copied.classList.add("copiedAnimation");
     container.innerText = code;
 }
+
+
 
 function RandomColorGenerator() {
     copied.classList.remove("copiedAnimation");
