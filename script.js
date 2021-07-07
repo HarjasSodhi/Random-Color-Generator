@@ -49,7 +49,7 @@ function RandomColorGenerator() {
     for (let i = 0; i < 6; i++) {
         NewCode += symbolsArr[Math.floor(Math.random() * 16)];
     }
-    let code = `background-color: ${NewCode}`
+    let code = `background-color: ${NewCode};`
     const el = document.createElement('textarea');
     el.value = code;
     document.body.appendChild(el);
